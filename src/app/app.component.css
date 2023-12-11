@@ -1,0 +1,36 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.pagination {
+  margin: 20px;
+  width: 60%;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+.toastr {
+  position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 2px solid #ff3333;
+    padding: 10px;
+    border-radius: 8px;
+    color: #ff3333;
+}

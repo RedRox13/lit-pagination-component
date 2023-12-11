@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="container">
+    <div *ngIf="(list$ | async) as list">
+      <div *ngIf="list.length; else noData">
+        <ul>
+          <li *ngFor="let beer of list">{{ beer.name }}</li>
+        </ul>
+      </div>
+
+      <ng-template #noData>
+        <div>No beers</div>
+      </ng-template>  
+    </div>
+    <div class="loading" *ngIf="isLoading$ | async">Loading...</div>
+  </div>
+  <div *ngIf="isToastrShown" class="toastr">Error: {{errorMessage}}</div>
+  <wc-pagination class="pagination"
+                 [currentPage]="currentPage"
+                 [totalPages]="totalPages"
+                 (page-changed)="handlePageChange($event)"
+  ></wc-pagination>
+</div>

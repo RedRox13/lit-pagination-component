@@ -1,0 +1,158 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #F1F1F1;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #333333;
+}
+
+.pagination-item:hover {
+  background-color: #F1F1F1;
+}
+
+.pagination-item.active {
+  background-color: #2F80ED;
+  color: white;
+  border-color: #2F80ED;
+}
+
+.pagination-item.ellipsis {
+  border: none;
+  cursor: default;
+}
+
+.pagination-item.ellipsis:hover {
+  background-color: transparent;
+}
+
+.circle {
+  border-radius: 32px;
+}
+
+.text-label {
+  border: 1px solid transparent;
+}
+
+.text-label:hover {
+  color: #666;
+  background-color: transparent;
+}
+
+object {
+  pointer-events: none;
+}
+
+.disabled, .disabled:hover {
+  color: #F1F1F1;
+  cursor: default;
+  background-color: transparent;
+}
+
+.disabled .icon {
+  filter: invert(89%) sepia(11%) saturate(16%) hue-rotate(340deg) brightness(90%) contrast(94%);
+}
+
+.page-selection {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.selected-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 15px;
+}
+
+.selected-item:hover {
+  border-color: #BBB;
+}
+
+.selected-item:focus {
+  border-color: #2F80ED;
+}
+.dropdown-list-wrapper {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+  border: 1px solid #DDD;
+  height: 200px;
+  padding-right: 4px;
+}
+.dropdown-list {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  border-radius: 8px;
+}
+
+.dropdown-list-wrapper.open {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background : transparent;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  margin: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EEE;;
+  border-radius: 10px;
+  width : 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F8F8F; 
+}
+
+.dropdown-item {
+  cursor: pointer;
+  padding: 8px 15px;
+}
+
+.dropdown-item:hover {
+  background-color: #F9F9F9;
+}
+
+@media (max-width:480px)  {
+  .pagination {
+    display: none;
+  }
+  .page-selection {
+    display: flex;
+  }
+}
